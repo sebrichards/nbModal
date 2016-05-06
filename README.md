@@ -48,7 +48,7 @@ controller('root', function(nbModal) {
 			label: 'Click me!',
 			'onDone()': function() {
 				nbModal.close();
-				//... etc
+				// ...etc
 			}
 		});
 	}
@@ -63,7 +63,7 @@ The following framework configurations are included in `src/`:
 
 * Bootstrap
   * Modals should provide their own `<div class="modal-content"></div>`
-  * Avoid using `data-dismiss`, since the plugin doesn't listen for these.
+  * Avoid using `data-dismiss`, since the plugin doesn't listen for it.
 
 Feel free to contribute other implementations!
 
@@ -92,9 +92,9 @@ For a practical example of how this works, see `src/nbModal-bootstrap.js`.
 
 | Property                        | Type       | Details                                                                                            |
 |---------------------------------|------------|----------------------------------------------------------------------------------------------------|
-| template/templateUrl (optional) | `string`   | Wrapping template for modals. Useful for DRY modal templates, or dynamic construction.             |
-| open(el)                        | `function` | Open the modal, using provided framework.<br>`el` is the component's DOM element.                  |
-| close(el)                       | `function` | Close the modal, using provided framework.<br>`el` is the component's DOM element.                 |
+| template/templateUrl (optional) | `string`   | Wrapping template for modals. Useful for DRY modal templates.                                      |
+| open(el)                        | `function` | Open the modal, using the chosen framework.<br>`el` is the component's DOM element.                |
+| close(el)                       | `function` | Close the modal, using the chosen framework.<br>`el` is the component's DOM element.               |
 | setContent(el, html)            | `function` | Place the provided HTML in the correct element.<br>Intended for use with `template`/`templateUrl`. |
 
 ## Notes
