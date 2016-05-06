@@ -95,7 +95,7 @@ For a practical example of how this works, see `src/nbModal-bootstrap.js`.
 | template/templateUrl (optional) | `string`   | Wrapping template for modals. Useful for DRY modal templates.                                      |
 | open(el)                        | `function` | Open the modal, using the chosen framework.<br>`el` is the component's DOM element.                |
 | close(el)                       | `function` | Close the modal, using the chosen framework.<br>`el` is the component's DOM element.               |
-| setContent(el, html)            | `function` | Place the provided HTML in the correct element.<br>Intended for use with `template`/`templateUrl`. |
+| setContent(el, html)            | `function` | Place the provided HTML in the correct element, returning that updated element.<br>Intended for use with `template`/`templateUrl`. |
 
 ## Notes
 
