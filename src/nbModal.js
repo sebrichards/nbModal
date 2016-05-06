@@ -3,7 +3,7 @@ angular.module('nbModal', [])
 	/** Provider for modal configurtaion */
 	.provider('nbModalConfig', function() {
 
-		/** The template (if nay) */
+		/** The template (if any) */
 		this.template = null;
 
 		/** The template URL (if any) */
