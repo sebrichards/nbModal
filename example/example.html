@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Examples</title>
+
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+		<script src="../src/nbModal.js"></script>
+		<script src="../src/nbModal-bootstrap.js"></script>
+
+		<script src="example.js"></script>
+		<script src="modals/alert.js"></script>
+		<script src="modals/confirm.js"></script>
+		<script src="modals/itemEditor.js"></script>
+		<script src="modals/itemList.js"></script>
+		<script src="modals/prompt.js"></script>
+
+	</head>
+
+	<body ng-app="demo">
+
+		<nb-modal></nb-modal>
+
+		<div class="container" ng-controller="ExampleCtrl as $ctrl">
+			<h1>Examples</h1>
+			<h2>Simple</h2>
+			<p>Each of these demonstrate modal self-control vs call-site control.</p>
+			<p><button class="btn btn-primary" ng-click="$ctrl.showAlert()">Emulate alert()</button></p>
+			<p><button class="btn btn-primary" ng-click="$ctrl.showConfirm()">Emulate confirm()</button></p>
+			<p><button class="btn btn-primary" ng-click="$ctrl.showPrompt()">Emulate prompt()</button></p>
+			<h2>Chained</h2>
+			<p>Each of these demonstrate the chaining of modals.</p>
+			<p><button class="btn btn-primary" ng-click="$ctrl.showSimpleChained()">Confirm + Alert</button></p>
+			<p>
+				<button class="btn btn-primary" ng-click="$ctrl.showComplexChained()">Item list + editor</button>
+				&nbsp;
+				Items are: {{$ctrl.itemString()}}
+			</p>
+		</div>
+
+	</body>
+</html>

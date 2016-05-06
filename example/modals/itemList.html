@@ -1,0 +1,38 @@
+<div class="modal-content">
+	<div class="modal-header">
+		<h4 class="modal-title">Item List</h4>
+	</div>
+	<div class="modal-body">
+
+		<p><button class="btn btn-success" ng-click="$ctrl.addItem()">Add</button></p>
+
+		<div ng-if="$ctrl.items.length === 0" class="alert alert-info">No items!</div>
+
+		<table ng-if="$ctrl.items.length > 0" class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th width="90"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in $ctrl.items">
+					<td style="vertical-align: middle;">{{item.name}}</td>
+					<td>
+						<button class="btn btn-default btn-sm" ng-click="$ctrl.editItem(item)">
+							<i class="glyphicon glyphicon-pencil"></i>
+						</button>
+						<button class="btn btn-danger btn-sm" ng-click="$ctrl.deleteItem(item)">
+							<i class="glyphicon glyphicon-trash"></i>
+						</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="modal-footer">
+		<button class="btn btn-default" ng-click="$ctrl.cancel()">Cancel</button>
+		<button class="btn btn-primary" ng-click="$ctrl.save()">Save</button>
+	</div>
+</div>
