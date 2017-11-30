@@ -4,6 +4,8 @@ A way to manage modals in an AngularJS application, using `angular.component()`.
 
 This library aims to be framework-agnostic and as flexible as possible.
 
+Check out the demo at https://sebrichards.github.io/nbModal/examples/example.html.
+
 ## Features
 
 * Modals are regular components (with bindings!)
